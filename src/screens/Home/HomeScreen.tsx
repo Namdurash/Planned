@@ -9,8 +9,9 @@ import * as PATHS from '../../navigation/paths';
 import {PlanPointsStore} from '../../store/PlanPoints.store';
 import {PlanPointProps} from '../../components/PlanPoint/PlanPoint.types';
 import {useSnapshot} from 'valtio';
+import {COLORS} from '../../ui/colors';
 
-export const Home = () => {
+export const HomeScreen = () => {
   const {navigate} = useNavigation();
   const snapshot = useSnapshot(PlanPointsStore);
 
@@ -20,7 +21,7 @@ export const Home = () => {
 
   return (
     <LinearGradient
-      colors={['#FF8439', '#FFFFFF']}
+      colors={[COLORS.orange, COLORS.absoluteWhite]}
       style={styles.container}
       start={{x: 0, y: 0.1}}
       end={{x: 0, y: 0.6}}>

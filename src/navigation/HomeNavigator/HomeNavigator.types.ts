@@ -1,6 +1,10 @@
+import type {StackNavigationProp} from '@react-navigation/stack';
 import * as PATHS from '../paths';
 
 export type HomeStackParamsList = {
-  [PATHS.HOME]: undefined;
-  [PATHS.PLAN_CREATOR]: undefined;
+  [PATHS.HOME_SCREEN]: undefined;
+  [PATHS.PLAN_CREATOR_SCREEN]: undefined;
+  [PATHS.WELCOME_SCREEN]: undefined;
 };
+
+export type HomeStackNavigationProp = StackNavigationProp<HomeStackParamsList>;

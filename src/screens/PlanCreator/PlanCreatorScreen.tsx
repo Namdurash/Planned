@@ -8,7 +8,7 @@ import {PlanPointsActions} from '../../store/PlanPoints.store';
 import {RadioButton} from 'react-native-paper';
 import {useAiModelCheckboxManager} from './useAiModelCheckboxManager';
 
-export const PlanCreator = () => {
+export const PlanCreatorScreen = () => {
   const inputRef = useRef<TextInput>(null);
   const {goBack} = useNavigation();
   const [loading, setLoading] = useState(false);
