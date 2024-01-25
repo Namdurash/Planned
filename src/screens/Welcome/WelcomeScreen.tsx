@@ -12,9 +12,10 @@ export const WelcomeScreen = () => {
 
   useFocusEffect(
     useCallback(() => {
-      setTimeout(() => navigate(PATHS.HOME_SCREEN), 4000);
+      setTimeout(() => navigate(PATHS.HOME_SCREEN), 3000);
     }, [navigate]),
   );
+
   return (
     <LinearGradient
       colors={[COLORS.orange, COLORS.absoluteWhite]}

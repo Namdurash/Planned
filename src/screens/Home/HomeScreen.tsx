@@ -16,7 +16,7 @@ export const HomeScreen = () => {
   const snapshot = useSnapshot(PlanPointsStore);
 
   const handleOnPlusButtonPress = () => {
-    navigate(PATHS.PLAN_CREATOR);
+    navigate(PATHS.PLAN_CREATOR_SCREEN);
   };
 
   return (
