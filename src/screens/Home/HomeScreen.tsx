@@ -10,9 +10,10 @@ import {PlanPointsStore} from '../../store/PlanPoints.store';
 import {PlanPointProps} from '../../components/PlanPoint/PlanPoint.types';
 import {useSnapshot} from 'valtio';
 import {COLORS} from '../../ui/colors';
+import {HomeStackNavigationProp} from '../../navigation/HomeNavigator/HomeNavigator.types';
 
 export const HomeScreen = () => {
-  const {navigate} = useNavigation();
+  const {navigate} = useNavigation<HomeStackNavigationProp>();
   const snapshot = useSnapshot(PlanPointsStore);
 
   const handleOnPlusButtonPress = () => {
