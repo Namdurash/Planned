@@ -4,7 +4,7 @@ import * as PATHS from '../paths';
 export type HomeStackParamsList = {
   [PATHS.HOME_SCREEN]: undefined;
   [PATHS.PLAN_CREATOR_SCREEN]: undefined;
-  [PATHS.WELCOME_SCREEN]: undefined;
+  [PATHS.WELCOME_SCREEN]: {userName: string};
   [PATHS.LOGIN_SCREEN]: undefined;
   [PATHS.GREETINGS_SCREEN]: undefined;
 };

@@ -1,4 +1,4 @@
-import React, {useEffect, useRef, useState} from 'react';
+import React, {useRef, useState} from 'react';
 import {ScrollView, Text, TextInput, View} from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 import {styles} from './planCreator.styles';
@@ -38,10 +38,6 @@ export const PlanCreatorScreen = () => {
     goBack();
   };
 
-  useEffect(() => {
-    console.log(currentActiveCheckbox());
-  }, [currentActiveCheckbox]);
-
   return (
     <LinearGradient
       colors={['#FF8439', '#F93A3A']}
@@ -54,8 +50,8 @@ export const PlanCreatorScreen = () => {
         </View>
       ) : (
         <ScrollView>
-          <Text style={styles.title}>PLANNED</Text>
-          <Text style={styles.subTitle}>Plan your day!</Text>
+          {/* <Text style={styles.title}>PLANNED</Text>
+          <Text style={styles.subTitle}>Plan your day!</Text> */}
           <Text style={styles.firstDescription}>
             Write your daily activities 🏃
           </Text>

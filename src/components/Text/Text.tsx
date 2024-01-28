@@ -10,6 +10,7 @@ export const Text = ({
   size = 14,
   color = COLORS.absoluteBlack,
   customStyles,
+  ...props
 }: TextProps) => {
   const fonstStyles: TextStyle = {
     fontFamily: `${family}-${weight}`,
@@ -18,6 +19,8 @@ export const Text = ({
   };
 
   return (
-    <NativeText style={[fonstStyles, customStyles]}>{children}</NativeText>
+    <NativeText style={[fonstStyles, customStyles]} {...props}>
+      {children}
+    </NativeText>
   );
 };

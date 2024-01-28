@@ -6,6 +6,7 @@ export const styles = StyleSheet.create({
     backgroundColor: COLORS.absoluteWhite,
     borderRadius: 20,
     height: 40,
+    paddingLeft: 20,
   },
   focusedContainer: {
     borderBottomWidth: 1,

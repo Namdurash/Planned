@@ -15,7 +15,10 @@ export const GreetingsScreen = () => {
   const handleFocusEffect = useCallback(() => {
     const hasUserName = getLocalData(AsyncKeys.userName);
     hasUserName.then(res => {
-      res ? navigate(PATHS.WELCOME_SCREEN) : navigate(PATHS.LOGIN_SCREEN);
+      console.log('RESPONSE', res);
+      res
+        ? navigate(PATHS.WELCOME_SCREEN, {userName: res})
+        : navigate(PATHS.LOGIN_SCREEN);
     });
   }, [navigate]);
 

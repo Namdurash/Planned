@@ -6,9 +6,11 @@ import * as PATHS from '../../navigation/paths';
 import {useFocusEffect, useNavigation} from '@react-navigation/native';
 import {HomeStackNavigationProp} from '../../navigation/HomeNavigator/HomeNavigator.types';
 import {Text} from '../../components/Text/Text';
+import {WelcomeRouteProps} from './WelcomeScreen.types';
 
-export const WelcomeScreen = () => {
+export const WelcomeScreen = ({route}: {route: WelcomeRouteProps}) => {
   const {navigate} = useNavigation<HomeStackNavigationProp>();
+  const {userName} = route.params;
 
   useFocusEffect(
     useCallback(() => {
@@ -27,7 +29,7 @@ export const WelcomeScreen = () => {
         size={40}
         color={COLORS.absoluteWhite}
         customStyles={styles.title}>
-        Hello, Kyrylo Korotych
+        Hello, {userName}
       </Text>
       <Text weight="Bold" size={40} color={COLORS.absoluteWhite}>
         Start with your plan today
